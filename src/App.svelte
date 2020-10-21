@@ -7,10 +7,14 @@
 		return `${Number((Math.min(p, 1) * 100).toFixed(2))}%`;
 	}
 
-	function chance(p, clovers, purities) {
+	function apply_luck(p, clovers, purities) {
 		const luck = clovers - purities;
 		const probbase = Math.pow((luck >= 0) ? 1 - p : p, Math.abs(luck) + 1);
-		return stylize_probability((luck >= 0) ? 1 - probbase : probbase)
+		return (luck >= 0) ? 1 - probbase : probbase;
+	}
+
+	function chance(p, clovers, purities) {
+		return stylize_probability(apply_luck(p, clovers, purities));
 	}
 
 	function cooldown(c, cell, gestures) {
@@ -51,11 +55,12 @@
 				<Icon src="/57_Leaf_Clover.png" tier="legendary" size="29" hasborder count bind:value={clover}></Icon>
 				<Icon src="/Purity.png" tier="lunar" size="29" hasborder count bind:value={purity}></Icon>
 			</div>
-			<div style="display: flex; justify-content: space-evenly; margin-bottom: 5px; ">
+			<div style="display: flex; justify-content: space-between; margin-bottom: 5px; ">
 				<Icon src="/AtG_Missile_Mk_1.png" tier="uncommon" size="58" caption={chance(0.1, clover, purity)} smallertext></Icon>
 				<Icon src="/Molten_Perforator.png" tier="boss" size="58" caption={chance(0.1, clover, purity)} smallertext></Icon>
 				<Icon src="/Ukulele.png" tier="uncommon" size="58" caption={chance(0.25, clover, purity)} smallertext></Icon>
 				<Icon src="/Happiest_Mask.png" tier="legendary" size="58" caption={chance(0.07, clover, purity)} smallertext></Icon>
+				<Icon src="/Brittle_Crown.png" tier="lunar" size="58" caption={chance(0.3, clover, purity)} smallertext></Icon>
 			</div>
 			<Label caption="Crit chance" value={chance(0.01 + 0.1 * glasses + (predatory ? 0.05 : 0) + (scythe ? 0.05 : 0) + (shatterspleen ? 0.05 : 0), clover, purity)}>
 				<Icon src="/Lens-Maker's_Glasses.png" tier="common" size="58" count bind:value={glasses}></Icon>
@@ -83,6 +88,9 @@
 			<Label caption="Chance to proc" value={chance(1 - 1 / (1 + 0.2 * meathook), clover, purity)}>
 				<Icon src="/Sentient_Meat_Hook.png" tier="legendary" size="58" count bind:value={meathook}></Icon>
 			</Label>
+			<Label caption="Monster drop" value={chance(0.01, clover, purity)} extras={[["Boss drop", chance(0.03, clover, purity)]]}>
+				<Icon src="/Monster_Log_Enemy_Icon.png" tier="none" size="58"></Icon>
+			</Label>
 			<Label caption="Chance to drop" value={chance(0.00025, clover, purity)}>
 				<div style="width: 180px; height: 60px; padding-left: 1px; display: flex; align-items: center; justify-content: space-between;">
 					<Icon src="/Ifrit's_Distinction.png" tier="equipment" size="32"></Icon>
@@ -92,8 +100,11 @@
 					<Icon src="/Spectral_Circlet.png" tier="equipment" size="32"></Icon>
 				</div>
 			</Label>
-			<Label caption="Monster drop" value={chance(0.01, clover, purity)} extras={[["Boss drop", chance(0.03, clover, purity)]]}>
-				<Icon src="/Monster_Log_Enemy_Icon.png" tier="none" size="58"></Icon>
+			<Label caption="Chance to get" value={stylize_probability(1 - apply_luck(0.8, clover, purity))}>
+				<Icon src="/Tonic_Affliction.png" tier="none" size="58"></Icon>
+			</Label>
+			<Label caption="Chance to ignite" value={chance(0.5, clover, purity)} extras={[["Average stacks", Math.round(22 * apply_luck(0.5, clover, purity))]]}>
+				<Icon src="Flamethrower.png" tier="none" size="58"></Icon>
 			</Label>
 		</Grouping>
 
