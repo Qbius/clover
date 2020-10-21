@@ -4,7 +4,7 @@
 </script>
 
 <div class="component" class:rowspan>
-    <span class="shadowtext robofont mine" style="font-size: 18px; position: absolute; top: -13px; left: 10px;">{caption}</span>
+    <span class="shadowtext robofont mine" style="font-size: 14px; position: absolute; top: -12px; left: 10px;">{caption}</span>
     <div style="position: absolute; top: -21px; right: 12px"><slot name="header"/></div>
     <slot/>
 </div>
@@ -21,7 +21,7 @@
         padding-top: 15px;
         position: relative;
 
-        width: 368px;
+        width: 248px;
         
         display: flex;
         flex-direction: column;

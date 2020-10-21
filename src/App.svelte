@@ -56,11 +56,11 @@
 				<Icon src="/Purity.png" tier="lunar" size="29" hasborder count bind:value={purity}></Icon>
 			</div>
 			<div style="display: flex; justify-content: space-between; margin-bottom: 5px; margin-left: 5px; margin-right: 5px;">
-				<Icon src="/AtG_Missile_Mk_1.png" tier="uncommon" size="58" caption={chance(0.1, clover, purity)} smallertext></Icon>
-				<Icon src="/Molten_Perforator.png" tier="boss" size="58" caption={chance(0.1, clover, purity)} smallertext></Icon>
-				<Icon src="/Ukulele.png" tier="uncommon" size="58" caption={chance(0.25, clover, purity)} smallertext></Icon>
-				<Icon src="/Happiest_Mask.png" tier="legendary" size="58" caption={chance(0.07, clover, purity)} smallertext></Icon>
-				<Icon src="/Brittle_Crown.png" tier="lunar" size="58" caption={chance(0.3, clover, purity)} smallertext></Icon>
+				<Icon src="/AtG_Missile_Mk_1.png" tier="uncommon" size="38" caption={chance(0.1, clover, purity)} smallertext></Icon>
+				<Icon src="/Molten_Perforator.png" tier="boss" size="38" caption={chance(0.1, clover, purity)} smallertext></Icon>
+				<Icon src="/Ukulele.png" tier="uncommon" size="38" caption={chance(0.25, clover, purity)} smallertext></Icon>
+				<Icon src="/Happiest_Mask.png" tier="legendary" size="38" caption={chance(0.07, clover, purity)} smallertext></Icon>
+				<Icon src="/Brittle_Crown.png" tier="lunar" size="38" caption={chance(0.3, clover, purity)} smallertext></Icon>
 			</div>
 			<Label caption="Crit chance" value={chance(0.01 + 0.1 * glasses + (predatory ? 0.05 : 0) + (scythe ? 0.05 : 0) + (shatterspleen ? 0.05 : 0), clover, purity)}>
 				<Icon src="/Lens-Maker's_Glasses.png" tier="common" size="58" count bind:value={glasses}></Icon>
@@ -92,12 +92,16 @@
 				<Icon src="/Monster_Log_Enemy_Icon.png" tier="none" size="58"></Icon>
 			</Label>
 			<Label caption="Chance to drop" value={chance(0.00025, clover, purity)}>
-				<div style="width: 180px; height: 60px; padding-left: 1px; display: flex; align-items: center; justify-content: space-between;">
-					<Icon src="/Ifrit's_Distinction.png" tier="equipment" size="32"></Icon>
-					<Icon src="/Silence_Between_Two_Strikes.png" tier="equipment" size="32"></Icon>
-					<Icon src="/Her_Biting_Embrace.png" tier="equipment" size="32"></Icon>
-					<Icon src="/N'kuhana's_Retort.png" tier="equipment" size="32"></Icon>
-					<Icon src="/Spectral_Circlet.png" tier="equipment" size="32"></Icon>
+				<div style="display: flex; flex-direction: column; align-items: flex-start;">
+					<div style="width: 90px; height: 30px; padding-left: 1px; display: flex; align-items: flex-end; justify-content: center;">
+						<Icon src="/Ifrit's_Distinction.png" tier="equipment" size="28"></Icon>
+						<Icon src="/Silence_Between_Two_Strikes.png" tier="equipment" size="28"></Icon>
+						<Icon src="/Her_Biting_Embrace.png" tier="equipment" size="28"></Icon>
+					</div>
+					<div style="width: 90px; height: 30px; padding-left: 1px; display: flex; align-items: flex-start; justify-content: center;">
+						<Icon src="/N'kuhana's_Retort.png" tier="equipment" size="28"></Icon>
+						<Icon src="/Spectral_Circlet.png" tier="equipment" size="28"></Icon>
+					</div>
 				</div>
 			</Label>
 			<Label caption="Chance to get" value={stylize_probability(1 - apply_luck(0.8, clover, purity))}>
@@ -118,12 +122,14 @@
 				<Icon src="/Foreign_Fruit.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
 				<Icon src="/Primordial_Cube.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext></Icon>
 				<Icon src="/Ocular_HUD.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
-				<Icon src="/The_Back-up.png" tier="equipment" size="58" caption={cooldown(100, cell, gesture)} smalltext adnotation="25s duration"></Icon>
-				<Icon src="/Preon_Accumulator.png" tier="equipment" size="58" caption={cooldown(140, cell, gesture)} smalltext></Icon>
 			</div>
 			<div class="eq_row">
+				<Icon src="/The_Back-up.png" tier="equipment" size="58" caption={cooldown(100, cell, gesture)} smalltext adnotation="25s duration"></Icon>
+				<Icon src="/Preon_Accumulator.png" tier="equipment" size="58" caption={cooldown(140, cell, gesture)} smalltext></Icon>
 				<Icon src="/Milky_Chrysalis.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="15s duration"></Icon>
 				<Icon src="/Royal_Capacitor.png" tier="equipment" size="58" caption={cooldown(20, cell, gesture)} smalltext></Icon>
+			</div>
+			<div class="eq_row">
 				<Icon src="/Gnarled_Woodsprite.png" tier="equipment" size="58" caption={cooldown(15, cell, gesture)} smalltext></Icon>
 				<Icon src="/Radar_Scanner.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
 				<Icon src="/Eccentric_Vase.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
@@ -134,12 +140,14 @@
 				<Icon src="/Jade_Elephant.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="5s duration"></Icon>
 				<Icon src="/Sawmerang.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
 				<Icon src="/Recycler.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+			</div>
+			<div class="eq_row">
 				<Icon src="/Super_Massive_Leech.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
 				<Icon src="/Gorag's_Opus.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="7s duration"></Icon>
-			</div>
-			<div class="eq_row" style="margin-bottom: 5px;">
 				<Icon src="/Forgive_Me_Please.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
 				<Icon src="/Glowing_Meteorite.png" tier="lunar" size="58" caption={cooldown(140, cell, gesture)} smalltext adnotation="20s duration"></Icon>
+			</div>
+			<div class="eq_row" style="margin-bottom: 5px">
 				<Icon src="/Helfire_Tincture.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="12s duration"></Icon>
 				<Icon src="/Effigy_of_Grief.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
 				<Icon src="/Spinel_Tonic.png" tier="lunar" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="20s duration"></Icon>
@@ -155,7 +163,7 @@
 			<Label caption="Execute threshold" value={stylize_probability(1 - 1 / (1 + 0.13 * guillotine))}>
 				<Icon src="/Old_Guillotine.png" tier="uncommon" size="58" count bind:value={guillotine}></Icon>
 			</Label>
-			<Label caption="White item" value={rusted_white} extras={[["Green item", rusted_green], ["Red item", rusted_red]]}>
+			<Label caption="White" value={rusted_white} extras={[["Green", rusted_green], ["Red", rusted_red]]} small>
 				<Icon src="/Rusted_Key.png" tier="common" size="58" count bind:value={rusted}></Icon>
 			</Label>
 		</Grouping>
