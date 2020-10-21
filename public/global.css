@@ -6,7 +6,7 @@ html, body {
 
 body {
 	color: #F5E6CC;
-	background-color: #46344E;
+	background-color: #2b172c;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
@@ -70,4 +70,5 @@ button:focus {
 
 .robofont {
 	font-family: 'Press Start 2P', cursive;
+	text-transform: uppercase;
 }

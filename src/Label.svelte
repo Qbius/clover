@@ -1,24 +1,31 @@
 <script>
+    import ChanceText from './ChanceText.svelte';
+
     export let caption;
     export let value;
+    export let extras = [];
 </script>
 
 <div class="component">
     <div style="display: flex; justify-content: flex-start;">
         <slot/>
     </div>
-    <div style="margin-top: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <span class="shadowtext robofont" style="font-size: 6px;">{caption.toUpperCase()}</span>
-        <span class="shadowtext" style="font-size: 24px; width: 100px; text-align: center;">{value}</span>
+    <div style="flex: 1; margin-top: 6px; display: flex; justify-content: flex-end;">
+        <ChanceText {caption} {value}></ChanceText>
+        {#each extras as extra}
+            <ChanceText caption={extra[0]} value={extra[1]}></ChanceText>
+        {/each}
     </div>
 </div>
 
 <style>
     .component {
-        background-color: #4F4846;
+        background-color: #200f21;
+        border: 1px solid black;
 
+        min-width: 317px;
         padding: 3px;
-        margin-top: 8px;
+        margin-bottom: 4px;
 
         display: flex;
     }
