@@ -50,12 +50,12 @@
 
 <main>
 	<div id="content">
-		<Grouping caption="procs/drops" vertical>
+		<Grouping caption="procs/drops" rowspan>
 			<div slot="header" style="display: flex; width: 65px; justify-content: space-between;">
 				<Icon src="/57_Leaf_Clover.png" tier="legendary" size="29" hasborder count bind:value={clover}></Icon>
 				<Icon src="/Purity.png" tier="lunar" size="29" hasborder count bind:value={purity}></Icon>
 			</div>
-			<div style="display: flex; justify-content: space-between; margin-bottom: 5px; ">
+			<div style="display: flex; justify-content: space-between; margin-bottom: 5px; margin-left: 5px; margin-right: 5px;">
 				<Icon src="/AtG_Missile_Mk_1.png" tier="uncommon" size="58" caption={chance(0.1, clover, purity)} smallertext></Icon>
 				<Icon src="/Molten_Perforator.png" tier="boss" size="58" caption={chance(0.1, clover, purity)} smallertext></Icon>
 				<Icon src="/Ukulele.png" tier="uncommon" size="58" caption={chance(0.25, clover, purity)} smallertext></Icon>
@@ -113,33 +113,42 @@
 				<Icon src="/Fuel_Cell.png" tier="uncommon" size="29" hasborder count bind:value={cell}></Icon>
 				<Icon src="/Gesture_of_the_Drowned.png" tier="lunar" size="29" hasborder count bind:value={gesture}></Icon>
 			</div>
-			<Icon src="/Disposable_Missile_Launcher.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Foreign_Fruit.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
-			<Icon src="/Primordial_Cube.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext></Icon>
-			<Icon src="/Ocular_HUD.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
-			<Icon src="/The_Back-up.png" tier="equipment" size="58" caption={cooldown(100, cell, gesture)} smalltext adnotation="25s duration"></Icon>
-			<Icon src="/Preon_Accumulator.png" tier="equipment" size="58" caption={cooldown(140, cell, gesture)} smalltext></Icon>
-			<Icon src="/Milky_Chrysalis.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="15s duration"></Icon>
-			<Icon src="/Royal_Capacitor.png" tier="equipment" size="58" caption={cooldown(20, cell, gesture)} smalltext></Icon>
-			<Icon src="/Gnarled_Woodsprite.png" tier="equipment" size="58" caption={cooldown(15, cell, gesture)} smalltext></Icon>
-			<Icon src="/Radar_Scanner.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
-			<Icon src="/Eccentric_Vase.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Blast_Shower.png" tier="equipment" size="58" caption={cooldown(20, cell, gesture)} smalltext></Icon>
-			<Icon src="/Volcanic_Egg.png" tier="equipment" size="58" caption={cooldown(30, cell, gesture)} smalltext adnotation="5s duration"></Icon>
-			<Icon src="/Jade_Elephant.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="5s duration"></Icon>
-			<Icon src="/Sawmerang.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Recycler.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Super_Massive_Leech.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
-			<Icon src="/Gorag's_Opus.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="7s duration"></Icon>
-			<Icon src="/Forgive_Me_Please.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Glowing_Meteorite.png" tier="lunar" size="58" caption={cooldown(140, cell, gesture)} smalltext adnotation="20s duration"></Icon>
-			<Icon src="/Helfire_Tincture.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="12s duration"></Icon>
-			<Icon src="/Effigy_of_Grief.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Spinel_Tonic.png" tier="lunar" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="20s duration"></Icon>
+			<div class="eq_row">
+				<Icon src="/Disposable_Missile_Launcher.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+				<Icon src="/Foreign_Fruit.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
+				<Icon src="/Primordial_Cube.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext></Icon>
+				<Icon src="/Ocular_HUD.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
+				<Icon src="/The_Back-up.png" tier="equipment" size="58" caption={cooldown(100, cell, gesture)} smalltext adnotation="25s duration"></Icon>
+				<Icon src="/Preon_Accumulator.png" tier="equipment" size="58" caption={cooldown(140, cell, gesture)} smalltext></Icon>
+			</div>
+			<div class="eq_row">
+				<Icon src="/Milky_Chrysalis.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="15s duration"></Icon>
+				<Icon src="/Royal_Capacitor.png" tier="equipment" size="58" caption={cooldown(20, cell, gesture)} smalltext></Icon>
+				<Icon src="/Gnarled_Woodsprite.png" tier="equipment" size="58" caption={cooldown(15, cell, gesture)} smalltext></Icon>
+				<Icon src="/Radar_Scanner.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
+				<Icon src="/Eccentric_Vase.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+				<Icon src="/Blast_Shower.png" tier="equipment" size="58" caption={cooldown(20, cell, gesture)} smalltext></Icon>
+			</div>
+			<div class="eq_row">
+				<Icon src="/Volcanic_Egg.png" tier="equipment" size="58" caption={cooldown(30, cell, gesture)} smalltext adnotation="5s duration"></Icon>
+				<Icon src="/Jade_Elephant.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="5s duration"></Icon>
+				<Icon src="/Sawmerang.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+				<Icon src="/Recycler.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+				<Icon src="/Super_Massive_Leech.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
+				<Icon src="/Gorag's_Opus.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="7s duration"></Icon>
+			</div>
+			<div class="eq_row" style="margin-bottom: 5px;">
+				<Icon src="/Forgive_Me_Please.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+				<Icon src="/Glowing_Meteorite.png" tier="lunar" size="58" caption={cooldown(140, cell, gesture)} smalltext adnotation="20s duration"></Icon>
+				<Icon src="/Helfire_Tincture.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="12s duration"></Icon>
+				<Icon src="/Effigy_of_Grief.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+				<Icon src="/Spinel_Tonic.png" tier="lunar" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="20s duration"></Icon>
+				<div style="width: 60px; height: 60px"></div>
+			</div>
 
 		</Grouping>
 
-		<Grouping caption="Misc." vertical>
+		<Grouping caption="Misc.">
 			<Label caption="Chance to block" value={stylize_probability(1 - 1 / (1 + 0.15 * tougher))}>
 				<Icon src="/Tougher_Times.png" tier="common" size="58" count bind:value={tougher}></Icon>
 			</Label>
@@ -155,31 +164,36 @@
 
 <style>
 	main {
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-
 		display: flex;
 		justify-content: center;
 	}
 
 	#content {
-		margin: auto;
 		width: 100%;
 
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
-		align-items: flex-start;
-		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.eq_row {
+		margin-left: 4px;
+		margin-right: 4px;
+		display: flex;
+		justify-content: center;
 	}
 
 @media (min-width: 640px) {
 	main {
 		max-width: none;
+		height: 100vh;
 	}
 
 	#content {
-		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
 	}
 }
 </style>

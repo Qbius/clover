@@ -1,9 +1,9 @@
 <script>
     export let caption;
-    export let vertical = false;
+    export let rowspan = false;
 </script>
 
-<div class="component" class:vertical>
+<div class="component" class:rowspan>
     <span class="shadowtext robofont mine" style="font-size: 18px; position: absolute; top: -13px; left: 10px;">{caption}</span>
     <div style="position: absolute; top: -21px; right: 12px"><slot name="header"/></div>
     <slot/>
@@ -15,20 +15,16 @@
         border-radius: 12px;
         background-color: #49244b;
 
-        margin-left: 5px;
-        margin-right: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
+        margin: 5px;
+        margin-top: 16px;
         padding-bottom: 5px;
         padding-top: 15px;
         position: relative;
 
+        width: 368px;
+        
         display: flex;
-        align-items: stretch;
-        flex-wrap: wrap;
-    }
-
-    .vertical {
         flex-direction: column;
+        align-items: stretch;
     }
 </style>

@@ -25,7 +25,9 @@
 
         min-width: 317px;
         padding: 3px;
-        margin-bottom: 4px;
+        margin-bottom: 3px;
+        margin-right: 5px;
+        margin-left: 5px;
 
         display: flex;
     }
