@@ -1,10 +1,12 @@
 <script>
     export let caption;
-    export let rowspan = false;
+    export let wrap = false;
+
+    $: iphonese = window.screen.width <= 240;
 </script>
 
-<div class="component" class:rowspan>
-    <span class="shadowtext robofont mine" style="font-size: 14px; position: absolute; top: -12px; left: 10px;">{caption}</span>
+<div class="component" class:wrap>
+    <span class="shadowtext robofont grouptitle" style="position: absolute; left: 10px;">{caption}</span>
     <div style="position: absolute; top: -21px; right: 12px"><slot name="header"/></div>
     <slot/>
 </div>
@@ -27,4 +29,26 @@
         flex-direction: column;
         align-items: stretch;
     }
+    
+    .grouptitle {
+        font-size: 14px;
+        top: -12px;
+    }
+
+    .wrap {
+        flex-flow: wrap;
+        padding-left: 4px;
+        padding-right: -4px;
+    }
+
+@media (min-width: 320px) {
+    .component {
+        width: 308px;
+    }
+
+    .grouptitle {
+        font-size: 18px;
+        top: -14px;
+    }
+}
 </style>

@@ -27,4 +27,15 @@
         width: 50px;
         font-size: 14px;
     }
+
+@media (min-width: 320px) {
+    .smaller-text-caption {
+        font-size: 6px;
+    }
+
+    .smaller-text-value {
+        width: 70px;
+        font-size: 20px;
+    }
+}
 </style>
