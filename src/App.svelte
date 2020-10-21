@@ -22,7 +22,7 @@
 		return `${Math.round(proper_c)}s`;
 	}
 
-	let proc_coefficient = 0.6;
+	let proc_coefficient = 1;
 
 	let clover = 0;
 	let purity = 0;
@@ -62,11 +62,11 @@
 				<Icon src="/Purity.png" tier="lunar" size="29" hasborder count bind:value={purity}></Icon>
 			</div>
 			<div style="display: flex; justify-content: space-between; margin-bottom: 5px; margin-left: 5px; margin-right: 5px;">
-				<Icon src="/AtG_Missile_Mk_1.png" tier="uncommon" size={iphonese ? '38' : '52'} caption={chance(0.1 * proc_coefficient, clover, purity)} smallertext></Icon>
-				<Icon src="/Molten_Perforator.png" tier="boss" size={iphonese ? '38' : '52'} caption={chance(0.1 * proc_coefficient, clover, purity)} smallertext></Icon>
-				<Icon src="/Ukulele.png" tier="uncommon" size={iphonese ? '38' : '52'} caption={chance(0.25 * proc_coefficient, clover, purity)} smallertext></Icon>
-				<Icon src="/Happiest_Mask.png" tier="legendary" size={iphonese ? '38' : '52'} caption={chance(0.07, clover, purity)} smallertext></Icon>
-				<Icon src="/Brittle_Crown.png" tier="lunar" size={iphonese ? '38' : '52'} caption={chance(0.3 * proc_coefficient, clover, purity)} smallertext></Icon>
+				<Icon src="/AtG_Missile_Mk_1.png" tier="uncommon" size={iphonese ? '34' : '52'} caption={chance(0.1 * proc_coefficient, clover, purity)} smallertext></Icon>
+				<Icon src="/Molten_Perforator.png" tier="boss" size={iphonese ? '34' : '52'} caption={chance(0.1 * proc_coefficient, clover, purity)} smallertext></Icon>
+				<Icon src="/Ukulele.png" tier="uncommon" size={iphonese ? '34' : '52'} caption={chance(0.25 * proc_coefficient, clover, purity)} smallertext></Icon>
+				<Icon src="/Happiest_Mask.png" tier="legendary" size={iphonese ? '34' : '52'} caption={chance(0.07, clover, purity)} smallertext></Icon>
+				<Icon src="/Brittle_Crown.png" tier="lunar" size={iphonese ? '34' : '52'} caption={chance(0.3 * proc_coefficient, clover, purity)} smallertext></Icon>
 			</div>
 			<Label caption="Crit chance" value={chance(0.01 + 0.1 * glasses + (predatory ? 0.05 : 0) + (scythe ? 0.05 : 0) + (shatterspleen ? 0.05 : 0), clover, purity)}>
 				<Icon src="/Lens-Maker's_Glasses.png" tier="common" size="58" count bind:value={glasses}></Icon>
@@ -123,29 +123,29 @@
 				<Icon src="/Fuel_Cell.png" tier="uncommon" size="29" hasborder count bind:value={cell}></Icon>
 				<Icon src="/Gesture_of_the_Drowned.png" tier="lunar" size="29" hasborder count bind:value={gesture}></Icon>
 			</div>
-			<Icon src="/Disposable_Missile_Launcher.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Foreign_Fruit.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
-			<Icon src="/Primordial_Cube.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext></Icon>
-			<Icon src="/Ocular_HUD.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
-			<Icon src="/The_Back-up.png" tier="equipment" size="58" caption={cooldown(100, cell, gesture)} smalltext adnotation="25s duration"></Icon>
-			<Icon src="/Preon_Accumulator.png" tier="equipment" size="58" caption={cooldown(140, cell, gesture)} smalltext></Icon>
-			<Icon src="/Milky_Chrysalis.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="15s duration"></Icon>
-			<Icon src="/Royal_Capacitor.png" tier="equipment" size="58" caption={cooldown(20, cell, gesture)} smalltext></Icon>
-			<Icon src="/Gnarled_Woodsprite.png" tier="equipment" size="58" caption={cooldown(15, cell, gesture)} smalltext></Icon>
-			<Icon src="/Radar_Scanner.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
-			<Icon src="/Eccentric_Vase.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Blast_Shower.png" tier="equipment" size="58" caption={cooldown(20, cell, gesture)} smalltext></Icon>
-			<Icon src="/Volcanic_Egg.png" tier="equipment" size="58" caption={cooldown(30, cell, gesture)} smalltext adnotation="5s duration"></Icon>
-			<Icon src="/Jade_Elephant.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="5s duration"></Icon>
-			<Icon src="/Sawmerang.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Recycler.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Super_Massive_Leech.png" tier="equipment" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
-			<Icon src="/Gorag's_Opus.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="7s duration"></Icon>
-			<Icon src="/Forgive_Me_Please.png" tier="equipment" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Glowing_Meteorite.png" tier="lunar" size="58" caption={cooldown(140, cell, gesture)} smalltext adnotation="20s duration"></Icon>
-			<Icon src="/Helfire_Tincture.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext adnotation="12s duration"></Icon>
-			<Icon src="/Effigy_of_Grief.png" tier="lunar" size="58" caption={cooldown(45, cell, gesture)} smalltext></Icon>
-			<Icon src="/Spinel_Tonic.png" tier="lunar" size="58" caption={cooldown(60, cell, gesture)} smalltext adnotation="20s duration"></Icon>
+			<Icon src="/Disposable_Missile_Launcher.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+			<Icon src="/Foreign_Fruit.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
+			<Icon src="/Primordial_Cube.png" tier="equipment" size="52" caption={cooldown(60, cell, gesture)} smalltext></Icon>
+			<Icon src="/Ocular_HUD.png" tier="equipment" size="52" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
+			<Icon src="/The_Back-up.png" tier="equipment" size="52" caption={cooldown(100, cell, gesture)} smalltext adnotation="25s duration"></Icon>
+			<Icon src="/Preon_Accumulator.png" tier="equipment" size="52" caption={cooldown(140, cell, gesture)} smalltext></Icon>
+			<Icon src="/Milky_Chrysalis.png" tier="equipment" size="52" caption={cooldown(60, cell, gesture)} smalltext adnotation="15s duration"></Icon>
+			<Icon src="/Royal_Capacitor.png" tier="equipment" size="52" caption={cooldown(20, cell, gesture)} smalltext></Icon>
+			<Icon src="/Gnarled_Woodsprite.png" tier="equipment" size="52" caption={cooldown(15, cell, gesture)} smalltext></Icon>
+			<Icon src="/Radar_Scanner.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext adnotation="10s duration"></Icon>
+			<Icon src="/Eccentric_Vase.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+			<Icon src="/Blast_Shower.png" tier="equipment" size="52" caption={cooldown(20, cell, gesture)} smalltext></Icon>
+			<Icon src="/Volcanic_Egg.png" tier="equipment" size="52" caption={cooldown(30, cell, gesture)} smalltext adnotation="5s duration"></Icon>
+			<Icon src="/Jade_Elephant.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext adnotation="5s duration"></Icon>
+			<Icon src="/Sawmerang.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+			<Icon src="/Recycler.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+			<Icon src="/Super_Massive_Leech.png" tier="equipment" size="52" caption={cooldown(60, cell, gesture)} smalltext adnotation="8s duration"></Icon>
+			<Icon src="/Gorag's_Opus.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext adnotation="7s duration"></Icon>
+			<Icon src="/Forgive_Me_Please.png" tier="equipment" size="52" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+			<Icon src="/Glowing_Meteorite.png" tier="lunar" size="52" caption={cooldown(140, cell, gesture)} smalltext adnotation="20s duration"></Icon>
+			<Icon src="/Helfire_Tincture.png" tier="lunar" size="52" caption={cooldown(45, cell, gesture)} smalltext adnotation="12s duration"></Icon>
+			<Icon src="/Effigy_of_Grief.png" tier="lunar" size="52" caption={cooldown(45, cell, gesture)} smalltext></Icon>
+			<Icon src="/Spinel_Tonic.png" tier="lunar" size="52" caption={cooldown(60, cell, gesture)} smalltext adnotation="20s duration"></Icon>
 		</Grouping>
 
 		<Grouping caption="Misc.">

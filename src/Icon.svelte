@@ -24,7 +24,7 @@
     {/if}
     <img style="position: absolute; z-index: 1000; top: 1px; left: 1px; width: {size - 2}px; height: {size - 2}px;" alt={src} {src}>
     <div style="position: absolute; z-index: 1001; display: flex; justify-content: center; width: {size}px; height: {size}px;">
-        <span class="shadowtext" style="color: yellow; font-size: {Math.round(size * (smallertext ? 0.3 : smalltext ? 0.4 : 0.6))}px; margin: auto; font-variant-numeric: tabular-nums;">
+        <span class="shadowtext" style="color: yellow; font-size: {Math.round(size * (smallertext ? 0.25 : smalltext ? 0.4 : 0.6))}px; margin: auto; font-variant-numeric: tabular-nums;">
             {#if count}
                 {value}
             {:else}
@@ -43,7 +43,7 @@
 
 <style>
     .adnotation {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .greyedout {

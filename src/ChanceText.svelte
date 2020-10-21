@@ -24,8 +24,8 @@
     }
 
     .smaller-text-value {
-        width: 50px;
-        font-size: 14px;
+        width: 45px;
+        font-size: 12px;
     }
 
 @media (min-width: 320px) {
@@ -34,8 +34,8 @@
     }
 
     .smaller-text-value {
-        width: 70px;
-        font-size: 20px;
+        width: 62px;
+        font-size: 18px;
     }
 }
 </style>

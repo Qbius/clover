@@ -23,7 +23,7 @@
         padding-top: 15px;
         position: relative;
 
-        width: 248px;
+        width: 216px;
         
         display: flex;
         flex-direction: column;
@@ -31,24 +31,22 @@
     }
     
     .grouptitle {
-        font-size: 14px;
-        top: -12px;
+        font-size: 10px;
+        top: -10px;
     }
 
     .wrap {
         flex-flow: wrap;
-        padding-left: 4px;
-        padding-right: -4px;
     }
 
 @media (min-width: 320px) {
     .component {
-        width: 308px;
+        width: 270px;
     }
 
     .grouptitle {
-        font-size: 18px;
-        top: -14px;
+        font-size: 14px;
+        top: -12px;
     }
 }
 </style>
