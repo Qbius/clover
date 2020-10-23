@@ -18,7 +18,10 @@
     export let adnotation = "";
 </script>
 
-<div class={(!count && onoff && !boolean) ? 'greyedout' : ''} style="border: 1px solid black; position: relative; width: {size}px; height: {size}px;" on:click|preventDefault={() => count ? ++value : onoff ? boolean = !boolean : 0} on:contextmenu|preventDefault={() => count ? ((window.screen.width > 640) ? ((value > 0) ? --value : 0) : (value = 0)) : onoff ? boolean = !boolean : 0}>
+<div class={(!count && onoff && !boolean) ? 'greyedout' : ''} style="border: 1px solid black; position: relative; width: {size}px; height: {size}px;" 
+    on:click|preventDefault={() => count ? ++value : onoff ? boolean = !boolean : 0}
+    on:contextmenu|preventDefault={() => count ? ((window.screen.width > 640) ? ((value > 0) ? --value : 0) : (value = 0)) : onoff ? boolean = !boolean : 0}
+    on:wheel|preventDefault={({deltaY}) => (deltaY < 0) ? ++value : (value > 0) ? --value : 0}>
     {#if tier !== 'none'}
         <img style="position: absolute; z-index: 1; width: {size}px; height: {size}px;" alt={tier} src={bg_by_tier(tier)}>
     {/if}
